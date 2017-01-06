@@ -1,0 +1,27 @@
+# include "inv.h"
+# include <stdio.h>
+
+int main()
+{
+	int ctr;
+	struct invStruct items[3]; //array of three structure variables
+
+	for (ctr = 0; ctr < 3; ctr++)
+	{
+		printf("what is the manufacturer of item #%d?\n",(ctr+1));
+		gets(items[ctr].manuf);
+		puts("what is the model?");
+		gets(items[ctr].model);
+
+	}
+
+    printf("\n\n Here is the inventory: \n");
+
+        for (ctr = 0; ctr < 3; ctr++)
+	{
+	      printf("#%d: Manufacturer: %s", (ctr+1), items[ctr].manuf);
+              printf("Model:%s\n", items[ctr].model);
+      }
+
+return 0;
+}
